@@ -1,0 +1,13 @@
+<div class="loginPage">
+    <div class="wrapper">
+        <div class="header">
+            <h2>RENTMOJO</h2>
+        </div>
+        <div style="width: 100%;text-align: center">
+            <a [routerLink]="['/signup']">Need an account?</a>
+        </div>
+        <input type="email" name="email" placeholder="email" autocomplete="off" [(ngModel)]="email" />
+        <input type="password" name="password" placeholder="Password" [(ngModel)]="password" />
+        <button (click)="login()">Sign In</button>
+    </div>
+</div>
