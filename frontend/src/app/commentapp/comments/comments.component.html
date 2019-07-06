@@ -1,0 +1,26 @@
+<div class="box">
+    <div class="comment-box">
+        <textarea type="text" name="commentBoxData" id="commentBoxData" [(ngModel)]='commentBoxData'></textarea>
+        <button class="btn" (click)='postComment()'>Post Comment</button>
+    </div>
+
+    <div class="comment-lists">
+        <div class="comment" *ngFor='let comment of comments;let ind = index;'>
+            <div class="left">
+                <h2>{{ind+1}}. {{comment.user.name}}</h2>
+                <p>
+                    {{comment.comment.text}}
+                </p>
+            </div>
+            <div class="right" *ngIf='comment.user.id!=myId()'>
+
+                <a (click)='upvote(comment.comment.id)' [ngStyle]="{'cursor':comment.my_status!=1?'allowed':'not-allowed'}" [ngClass]="{'active':comment.my_status === 1}">{{comment.upvote}} UPVOTE</a>
+                <br><br>
+                <a (click)='downvote(comment.comment.id)' [ngStyle]="{'cursor':comment.my_status!=-1?'allowed':'not-allowed'}" [ngClass]="{'active':comment.my_status === -1}">{{comment.downvote}} DOWNVOTE</a>
+                <br>
+
+            </div>
+        </div>
+
+    </div>
+</div>

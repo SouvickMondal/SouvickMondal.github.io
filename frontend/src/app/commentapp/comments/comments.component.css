@@ -1,0 +1,60 @@
+.box {
+    max-width: 900px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 1px 2px 15px 1px darkgray;
+    margin: 5% auto;
+}
+
+.comment-box {
+    padding: 30px;
+}
+
+.comment-box textarea {
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    border-radius: 5px;
+    resize: vertical;
+    height: 150px;
+    border: 1px solid darkgray;
+}
+
+.btn {
+    display: block;
+    color: #FFF;
+    background-color: red;
+    margin-top: 3%;
+    margin-left: 78%;
+    height: 50px;
+    border: none;
+    border-radius: 3px;
+    font-size: 17px;
+}
+
+.comment-lists {
+    padding: 5%;
+}
+
+.comment-lists .comment {
+    display: flex;
+    flex-direction: row;
+}
+
+.comment .left {
+    width: 500px;
+}
+
+.comment .right {
+    width: 300px;
+    padding-left: 20%;
+    padding-top: 3%;
+}
+
+.comment .right a {
+    cursor: pointer;
+}
+
+.active {
+    color: red;
+}
